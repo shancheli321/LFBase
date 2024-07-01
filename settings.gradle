@@ -1,0 +1,3 @@
+
+rootProject.name = "LFBase"
+include ':app'
