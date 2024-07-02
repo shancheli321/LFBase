@@ -4,11 +4,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <!--//为可设置最大高度的ListView配置的参数-->
-    <declare-styleable name="AppMaxHeightListView">
-        <attr name="maxHeightListView" format="dimension" />
-    </declare-styleable>
-
     <!--//为可设置最大高度的recyclerView配置的参数-->
     <declare-styleable name="AppMaxHeightRecyclerView">
         <attr name="maxHeightRecyclerView" format="dimension" />
