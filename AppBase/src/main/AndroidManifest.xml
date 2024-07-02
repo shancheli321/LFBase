@@ -4,4 +4,16 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application>
+        <activity
+            android:name="com.lf.base.activity.AppBaseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.lf.activity.AppTransparentActivity"
+            android:theme="@style/transparent_activity"
+            android:exported="false" />
+    </application>
+
 </manifest>
