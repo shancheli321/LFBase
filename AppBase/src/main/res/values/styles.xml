@@ -1,0 +1,61 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--//为可设置最大高度的ListView配置的参数-->
+    <declare-styleable name="AppMaxHeightListView">
+        <attr name="maxHeightListView" format="dimension" />
+    </declare-styleable>
+
+    <!--//为可设置最大高度的recyclerView配置的参数-->
+    <declare-styleable name="AppMaxHeightRecyclerView">
+        <attr name="maxHeightRecyclerView" format="dimension" />
+    </declare-styleable>
+
+    <style name="AppCustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null </item>
+        <item name="android:windowNoTitle">true </item>
+        <item name="android:windowBackground">@color/color_transparent </item>
+        <item name="android:windowIsFloating">true </item>
+        <item name="android:windowContentOverlay">@null </item>
+        <item name="android:backgroundDimEnabled">true </item>
+        <item name="android:backgroundDimAmount">0.5 </item>
+    </style>
+
+
+    <style name="transparent_activity" parent="@style/Theme.AppCompat.Light.Dialog">
+        <!-- 去黑边 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置是否可滑动 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 设置是否透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景 -->
+        <item name="android:background">@null</item>
+        <!-- 窗口背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 点击空白部分activity不消失 -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <!-- 无标题 有的手机设置这行代码-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--Overlay:覆盖,Floating:浮动,Frame,框架-->
+    <style parent="@android:style/Theme.Dialog" name="ProgressHUD">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>
