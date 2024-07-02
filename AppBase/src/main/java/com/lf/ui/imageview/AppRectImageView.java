@@ -17,13 +17,14 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.lf.R;
 
 /**
  * @date: 2023/3/9
  */
-public class AppRectImageView extends androidx.appcompat.widget.AppCompatImageView {
+public class AppRectImageView extends AppCompatImageView {
 
     /**
      * android.widget.ImageView

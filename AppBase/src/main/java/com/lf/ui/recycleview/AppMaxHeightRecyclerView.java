@@ -1,4 +1,4 @@
-package com.lf.ui.listview;
+package com.lf.ui.recycleview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
