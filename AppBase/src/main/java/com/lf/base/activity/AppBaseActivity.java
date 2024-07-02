@@ -17,7 +17,7 @@ import com.lf.base.manager.AppActivityManager;
 
 public class AppBaseActivity extends AppCompatActivity {
 
-    private Context mContext;
+    protected Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
