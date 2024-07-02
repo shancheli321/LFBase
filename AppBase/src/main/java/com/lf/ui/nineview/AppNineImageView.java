@@ -7,9 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import androidx.appcompat.widget.AppCompatImageView;
-
-public class AppNineImageView extends AppCompatImageView {
+public class AppNineImageView extends androidx.appcompat.widget.AppCompatImageView {
 
     /**
      * 宽高比例
