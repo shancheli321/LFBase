@@ -1,3 +1,4 @@
 
 rootProject.name = "LFBase"
 include ':app'
+include ':AppBase'
