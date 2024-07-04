@@ -9,7 +9,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.lf.R;
+import com.lf.base.R;
 
 
 // https://www.jianshu.com/p/f755359b92c1

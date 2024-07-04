@@ -15,7 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.ColorRes;
 import androidx.annotation.StringRes;
 
-import com.lf.R;
+import com.lf.base.R;
 
 /**
  * @date: 2024/6/4

@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.lf.R;
+import com.lf.base.R;
 
 /**
  * @description 可以指定最大高度的列表

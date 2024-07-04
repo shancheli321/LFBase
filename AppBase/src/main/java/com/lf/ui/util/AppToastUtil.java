@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lf.R;
+import com.lf.base.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

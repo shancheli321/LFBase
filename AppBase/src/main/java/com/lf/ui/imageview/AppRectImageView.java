@@ -19,7 +19,7 @@ import android.util.AttributeSet;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import com.lf.R;
+import com.lf.base.R;
 
 /**
  * @date: 2023/3/9

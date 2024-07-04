@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.lf.R;
+import com.lf.base.R;
 import com.lf.base.manager.AppActivityManager;
 
 public class AppBaseActivity extends AppCompatActivity {

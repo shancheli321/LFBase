@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lf.R;
+import com.lf.base.R;
 
 public class AppProgressUtil {
 

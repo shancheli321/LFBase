@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-import com.lf.R;
+import com.lf.base.R;
 
 public class AppNoPaddingTextView extends AppCompatTextView {
     private Paint mPaint       = getPaint();
