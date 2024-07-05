@@ -8,14 +8,46 @@
     android:orientation="vertical"
     tools:context=".base.MainActivity">
 
-
-    <TextView
-        android:id="@+id/tv_toast"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dp_5"
-        android:gravity="center"
-        android:text="toast弹窗" />
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:gravity="center"
+            android:text="toast弹窗" />
+
+        <TextView
+            android:id="@+id/tv_toast_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:gravity="center"
+            android:text="toast弹窗成功" />
+
+        <TextView
+            android:id="@+id/tv_toast_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:gravity="center"
+            android:text="toast弹窗白色" />
+
+        <TextView
+            android:id="@+id/tv_toast_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:gravity="center"
+            android:text="toast弹窗黑色" />
+
+    </LinearLayout>
+
 
 
     <TextView
@@ -26,10 +58,19 @@
         android:gravity="center"
         android:text="dialog弹窗" />
 
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:gravity="center"
+        android:text="加载中" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
         >
         <com.lf.ui.imageview.LFCircleImageView
             android:id="@+id/iv_circle"
@@ -83,6 +124,22 @@
             />
     </LinearLayout>
 
+    <com.lf.ui.textview.LFRoundCornerTextView
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_40"
+        android:text="圆角textview"
+        android:textColor="@color/color_ED4F4F"
+        android:textSize="@dimen/sp_15"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_5"
+        app:lf_rc_backgroud_color="@color/color_999999"
+        app:lf_rc_border_color="@color/color_ED4F4F"
+        app:lf_rc_border_width="@dimen/dp_4"
+        app:lf_rc_border_dash_width="@dimen/dp_2"
+        app:lf_rc_border_dash_space="@dimen/dp_2"
+        app:lf_rc_corner_radius="@dimen/dp_20"
+        />
 
 
 </LinearLayout>

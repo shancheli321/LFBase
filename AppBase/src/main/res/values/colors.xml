@@ -43,4 +43,10 @@
     <color name="color_66ED4F4F">#66ED4F4F</color>
 
 
+    <!--    toast颜色值        -->
+    <color name="toast_hint_color">#3F51B5</color>
+    <color name="toast_success_color">#000000</color>
+    <color name="toast_warn_color">#FFA900</color>
+    <color name="toast_error_color">#000000</color>
+
 </resources>

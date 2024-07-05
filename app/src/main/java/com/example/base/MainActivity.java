@@ -16,6 +16,7 @@ import com.lf.base.activity.AppBaseActivity;
 import com.lf.base.listener.AppClick;
 import com.lf.ui.dialog.AppCustomDialog;
 import com.lf.ui.imageview.LFCircleImageView;
+import com.lf.ui.util.AppProgressUtil;
 import com.lf.ui.util.AppToastUtil;
 
 public class MainActivity extends AppBaseActivity {
@@ -28,7 +29,28 @@ public class MainActivity extends AppBaseActivity {
         findViewById(R.id.tv_toast).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppToastUtil.showLong(mContext, "tost弹窗");
+                AppToastUtil.showLong( "tost弹窗");
+            }
+        });
+
+        findViewById(R.id.tv_toast_success).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppToastUtil.showSuccess( "tost弹窗");
+            }
+        });
+
+        findViewById(R.id.tv_toast_black).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppToastUtil.showBlack( "tost弹窗");
+            }
+        });
+
+        findViewById(R.id.tv_toast_white).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppToastUtil.showWhite( "tost弹窗");
             }
         });
 
@@ -53,6 +75,13 @@ public class MainActivity extends AppBaseActivity {
                             }
                         })
                         .build().show();
+            }
+        });
+
+        findViewById(R.id.tv_progress).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

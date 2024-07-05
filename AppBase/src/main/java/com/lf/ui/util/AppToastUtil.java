@@ -1,19 +1,13 @@
 package com.lf.ui.util;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.os.Handler;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import com.hjq.toast.ToastParams;
+import com.hjq.toast.Toaster;
+import com.hjq.toast.style.BlackToastStyle;
+import com.hjq.toast.style.CustomToastStyle;
+import com.hjq.toast.style.WhiteToastStyle;
 import com.lf.base.R;
+import android.app.Application;
 
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 /**
@@ -23,162 +17,152 @@ public class AppToastUtil {
 
 
     /**
-     * 带显示时长的toast
-     * @param context
-     * @param text
+     * 初始化 Toast，需要在 Application.create 中初始化
+     *
+     * @param application       应用的上下文
      */
-    public static void showText(Context context, String text) {
-        TimeToast.makeText(context, text, 5).show();
+    public static void init(Application application) {
+        Toaster.init(application);
     }
 
     /**
-     * 显示short message
-     * @param context 全局context
-     * @param resId string string资源id
+     * 判断当前框架是否已经初始化
      */
-    public static void showShort(Context context, int resId) {
-        Toast.makeText(context, resId, Toast.LENGTH_SHORT).show();
-    }
-
-    /**
-     * 显示short message
-     * @param context 全局context
-     * @param message 显示msg
-     */
-    public static void showShort(Context context, String message) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
-    }
-
-    /**
-     * 显示long message
-     * @param context 全局context
-     * @param resId string string资源id
-     */
-    public static void showLong(Context context, int resId) {
-        Toast.makeText(context, resId, Toast.LENGTH_LONG).show();
-    }
-
-    /**
-     * 显示long message
-     * @param context 全局context
-     * @param message 显示msg
-     */
-    public static void showLong(Context context, String message) {
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    public static boolean isInit() {
+        return Toaster.isInit();
     }
 
 
     /**
-     * 自定义弹窗
-     * @param context
-     * @param str
-     * @param showTime
-     * @return
+     * 延迟显示 Toast
      */
-    private Toast midToast(Context context, String str, int showTime) {
 
-        Toast toast = Toast.makeText(context, str, showTime);
-
-        //设置显示位置
-        toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL , 0, 0);
-
-        TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
-
-        //设置字体颜色
-        v.setTextColor(Color.YELLOW);
-
-        return toast;
+    public static void showDelayed(int id, long delayMillis) {
+        Toaster.delayedShow(id, delayMillis);
     }
 
+    public static void showDelayed(Object object, long delayMillis) {
+        Toaster.delayedShow(object, delayMillis);
+    }
+
+    public static void showDelayed(CharSequence text, long delayMillis) {
+        Toaster.delayedShow(text, delayMillis);
+    }
 
 
     /**
-     * 自定义 文字+图片 弹窗
-     * @param context
-     * @param str
+     * 显示一个短 Toast
      */
-    private static Toast customToast(Context context, String str)  {
-        LayoutInflater inflater = LayoutInflater.from(context);
 
-        View view = inflater.inflate(R.layout.app_toast_custom_layout, null);
+    public static void showShort(int id) {
+        Toaster.showShort(id);
+    }
 
-        ImageView img_logo = (ImageView) view.findViewById(R.id.img_logo);
-        TextView tv_msg = (TextView) view.findViewById(R.id.tv_msg);
-        tv_msg.setText(str);
+    public static void showShort(Object object) {
+        Toaster.showShort(object);
+    }
 
-        Toast toast = new Toast(context);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.setDuration(Toast.LENGTH_LONG);
-        toast.setView(view);
-
-        return toast;
+    public static void showShort(CharSequence text) {
+        Toaster.showShort(text);
     }
 
 
-    public static class TimeToast {
+    /**
+     * 显示一个长 Toast
+     */
 
-        //定义的显示时间
-        private double time;
-
-        private static Handler handler;
-
-        //显示的计时器
-        private Timer showTimer;
-
-        //取消的计时器
-        private Timer cancelTimer;
-
-        private Toast toast;
-
-        private TimeToast(){
-            showTimer = new Timer();
-            cancelTimer = new Timer();
-        }
-
-        public void setTime(double time) {
-            this.time = time;
-        }
-        public void setToast(Toast toast){
-            this.toast = toast;
-        }
-
-        public static TimeToast makeText(Context context, String text, double time) {
-            TimeToast toast1= new TimeToast();
-            toast1.setTime(time);
-            toast1.setToast(Toast.makeText(context, text, Toast.LENGTH_SHORT));
-            handler = new Handler(context.getMainLooper());
-            return toast1;
-        }
-
-        public void show(){
-            toast.show();
-            if(time > 2){
-                showTimer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        handler.post(new ShowRunnable());
-                    }
-                }, 0, 1900);
-            }
-            cancelTimer.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    handler.post(new CancelRunnable());
-                }
-            }, (long)(time * 1000));
-        }
-        private class CancelRunnable implements Runnable{
-            @Override
-            public void run() {
-                showTimer.cancel();
-                toast.cancel();
-            }
-        }
-        private class ShowRunnable implements Runnable{
-            @Override
-            public void run() {
-                toast.show();
-            }
-        }
+    public static void showLong(int id) {
+        Toaster.showLong(id);
     }
+
+    public static void showLong(Object object) {
+        Toaster.showLong(object);
+    }
+
+    public static void showLong(CharSequence text) {
+        Toaster.showLong(text);
+    }
+
+    /**
+     * 显示 Toast
+     */
+
+    public static void show(int id) {
+        Toaster.show(id);
+    }
+
+    public static void show(Object object) {
+        Toaster.show(object);
+    }
+
+    public static void show(CharSequence text) {
+        Toaster.show(text);
+    }
+
+    public static void show(ToastParams params) {
+        Toaster.show(params);
+    }
+
+    /**
+     * 取消吐司的显示
+     */
+    public static void cancel() {
+        Toaster.cancel();
+    }
+
+    /**
+     * 设置吐司的位置
+     *
+     * @param gravity  重心
+     */
+    public static void setGravity(int gravity) {
+        Toaster.setGravity(gravity);
+    }
+
+    public static void setGravity(int gravity, int xOffset, int yOffset) {
+        Toaster.setGravity(gravity, xOffset, yOffset);
+    }
+
+    /**
+     * 给当前 Toast 设置新的布局
+     */
+    public static void setView(int id) {
+        Toaster.setView(id);
+    }
+
+    public static void showSuccess(String text) {
+        ToastParams params = new ToastParams();
+        params.text = text;
+        params.style = new CustomToastStyle(R.layout.toast_success);
+        Toaster.show(params);
+    }
+
+    public static void showError(String text) {
+        ToastParams params = new ToastParams();
+        params.text = text;
+        params.style = new CustomToastStyle(R.layout.toast_error);
+        Toaster.show(params);
+    }
+
+    public static void showWarning(String text) {
+        ToastParams params = new ToastParams();
+        params.text = text;
+        params.style = new CustomToastStyle(R.layout.toast_warn);
+        Toaster.show(params);
+    }
+
+    public static void showWhite(String text) {
+        ToastParams params = new ToastParams();
+        params.text = text;
+        params.style = new WhiteToastStyle();
+        Toaster.show(params);
+    }
+
+    public static void showBlack(String text) {
+        ToastParams params = new ToastParams();
+        params.text = text;
+        params.style = new BlackToastStyle();
+        Toaster.show(params);
+    }
+
 }

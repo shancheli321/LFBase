@@ -3,6 +3,7 @@ package com.example.base;
 import android.app.Application;
 
 import com.lf.base.manager.AppActivityManager;
+import com.lf.ui.util.AppToastUtil;
 import com.lf.util.log.AppLog;
 
 /**
@@ -13,6 +14,8 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        AppToastUtil.init(this);
 
         AppActivityManager.getActivityManager().setAppLog(new AppActivityManager.AppActivityLogInterface() {
             @Override

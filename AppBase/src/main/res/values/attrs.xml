@@ -32,4 +32,23 @@
         <attr name="lf_circle_border_overlay" format="boolean" />
         <attr name="lf_circle_background_color" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="RoundCornerTextView">
+        <!-- 背景色 -->
+        <attr name="lf_rc_backgroud_color" format="color"/>
+        <!-- 边框色 -->
+        <attr name="lf_rc_border_color" format="color"/>
+        <!-- 边框厚度 -->
+        <attr name="lf_rc_border_width" format="dimension"/>
+        <!-- 边框虚线长度 -->
+        <attr name="lf_rc_border_dash_width" format="dimension"/>
+        <!-- 边框虚线间隙 -->
+        <attr name="lf_rc_border_dash_space" format="dimension"/>
+        <!-- 圆角半径，stadium 表示半径为 min(height,width) / 2-->
+        <attr name="lf_rc_corner_radius" format="dimension">
+            <enum name="stadium" value="-1"/>
+        </attr>
+        <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
+        <attr name="lf_rc_pressed_ratio" format="float"/>
+    </declare-styleable>
 </resources>
