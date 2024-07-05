@@ -6,7 +6,11 @@
     </declare-styleable>
 
     <declare-styleable name="RectImageView">
+
+<!--        是否显示为圆形（默认为矩形）-->
         <attr name="lf_is_circle" format="boolean" />
+
+<!--        border、inner_border是否覆盖图片内容-->
         <attr name="lf_is_cover_src" format="boolean" />
         <attr name="lf_corner_radius" format="dimension" />
         <attr name="lf_corner_top_left_radius" format="dimension" />
@@ -17,6 +21,8 @@
         <attr name="lf_border_color" format="color" />
         <attr name="lf_inner_border_width" format="dimension" />
         <attr name="lf_inner_border_color" format="color" />
+
+<!--        图片上绘制的遮罩颜色 不设置颜色则不绘制-->
         <attr name="lf_mask_color" format="color" />
     </declare-styleable>
 

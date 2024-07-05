@@ -36,7 +36,7 @@
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_40"
             android:layout_marginLeft="@dimen/dp_10"
-            app:lf_circle_border_width="@dimen/dp_5"
+            app:lf_circle_border_width="@dimen/dp_4"
             app:lf_circle_border_color="@color/color_007AFF"
             />
 
@@ -55,10 +55,31 @@
             android:layout_height="@dimen/dp_40"
             android:layout_marginLeft="@dimen/dp_10"
             android:src="@drawable/hugh"
-            app:lf_is_circle="false"
             app:lf_border_color="@color/color_007AFF"
-            app:lf_border_width="@dimen/dp_1"
-            app:lf_corner_radius="@dimen/dp_4"
+            app:lf_border_width="@dimen/dp_4"
+            app:lf_corner_radius="@dimen/dp_8"
+            />
+
+        <com.lf.ui.imageview.LFRectImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/hugh"
+            app:lf_border_color="@color/color_007AFF"
+            app:lf_border_width="@dimen/dp_4"
+            app:lf_corner_radius="@dimen/dp_8"
+            app:lf_mask_color="@color/color_66ED4F4F"
+            />
+
+        <com.lf.ui.imageview.LFRectImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/hugh"
+            app:lf_border_color="@color/color_007AFF"
+            app:lf_border_width="@dimen/dp_4"
+            app:lf_corner_radius="@dimen/dp_8"
+            app:lf_is_cover_src="true"
             />
     </LinearLayout>
 
