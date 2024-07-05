@@ -10,10 +10,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.example.R;
 import com.lf.base.activity.AppBaseActivity;
 import com.lf.base.listener.AppClick;
 import com.lf.ui.dialog.AppCustomDialog;
+import com.lf.ui.imageview.LFCircleImageView;
 import com.lf.ui.util.AppToastUtil;
 
 public class MainActivity extends AppBaseActivity {
@@ -53,5 +55,8 @@ public class MainActivity extends AppBaseActivity {
                         .build().show();
             }
         });
+
+        LFCircleImageView imageView = findViewById(R.id.iv_circle);
+        Glide.with(MainActivity.this).load(R.drawable.hugh).into(imageView);
     }
 }

@@ -26,5 +26,42 @@
         android:gravity="center"
         android:text="dialog弹窗" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.lf.ui.imageview.LFCircleImageView
+            android:id="@+id/iv_circle"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            app:lf_circle_border_width="@dimen/dp_5"
+            app:lf_circle_border_color="@color/color_007AFF"
+            />
+
+        <com.lf.ui.imageview.LFRectImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/hugh"
+            app:lf_is_circle="true"
+            app:lf_border_color="@color/color_007AFF"
+            app:lf_border_width="@dimen/dp_4"
+            />
+
+        <com.lf.ui.imageview.LFRectImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/hugh"
+            app:lf_is_circle="false"
+            app:lf_border_color="@color/color_007AFF"
+            app:lf_border_width="@dimen/dp_1"
+            app:lf_corner_radius="@dimen/dp_4"
+            />
+    </LinearLayout>
+
+
 
 </LinearLayout>
