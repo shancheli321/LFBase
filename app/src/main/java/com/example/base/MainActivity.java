@@ -4,19 +4,12 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import com.bumptech.glide.Glide;
 import com.example.R;
 import com.lf.base.activity.AppBaseActivity;
-import com.lf.base.listener.AppClick;
 import com.lf.ui.dialog.AppCustomDialog;
 import com.lf.ui.imageview.LFCircleImageView;
-import com.lf.ui.util.AppProgressUtil;
+import com.lf.ui.util.AppLoadingUtil;
 import com.lf.ui.util.AppToastUtil;
 
 public class MainActivity extends AppBaseActivity {
@@ -78,10 +71,31 @@ public class MainActivity extends AppBaseActivity {
             }
         });
 
-        findViewById(R.id.tv_progress).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.tv_progress1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AppLoadingUtil.showLoading(mContext);
+            }
+        });
 
+        findViewById(R.id.tv_progress2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppLoadingUtil.showLoadingText(mContext, "我正在加载 请不要着急");
+            }
+        });
+
+        findViewById(R.id.tv_progress3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppLoadingUtil.showWithDelayed(mContext, 2000);
+            }
+        });
+
+        findViewById(R.id.tv_progress4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppLoadingUtil.dismiss();
             }
         });
 

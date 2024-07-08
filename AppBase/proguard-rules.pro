@@ -20,5 +20,9 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-
+#---------------------- toaster ------------------------------
 -keep class com.hjq.toast.** {*;}
+
+#---------------------- xpopup ------------------------------
+-dontwarn com.lxj.xpopup.widget.**
+-keep class com.lxj.xpopup.widget.**{*;}
