@@ -43,7 +43,7 @@ dependencies {
     implementation 'com.github.getActivity:Toaster:12.6'
 
     // 弹窗框架：https://github.com/junixapp/XPopup
-    implementation ('com.github.li-xiaojun:XPopup:2.10.0') {
+    api ('com.github.li-xiaojun:XPopup:2.10.0') {
         exclude group: "com.davemorrissey.labs", module: "subsampling-scale-image-view-androidx"
     }
 

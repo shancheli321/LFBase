@@ -9,8 +9,10 @@ import com.example.R;
 import com.lf.base.activity.AppBaseActivity;
 import com.lf.ui.dialog.AppCustomDialog;
 import com.lf.ui.imageview.LFCircleImageView;
+import com.lf.ui.util.AppDialogUtil;
 import com.lf.ui.util.AppLoadingUtil;
 import com.lf.ui.util.AppToastUtil;
+import com.lxj.xpopup.interfaces.OnConfirmListener;
 
 public class MainActivity extends AppBaseActivity {
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppBaseActivity {
             }
         });
 
-        findViewById(R.id.tv_dialog).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.tv_dialog1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AppCustomDialog.Builder(mContext)
@@ -70,6 +72,44 @@ public class MainActivity extends AppBaseActivity {
                         .build().show();
             }
         });
+
+
+        findViewById(R.id.tv_dialog2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppDialogUtil.showOK(mContext, "确定弹窗", "春眠不觉晓，处处闻啼鸟", new OnConfirmListener() {
+                    @Override
+                    public void onConfirm() {
+                        AppDialogUtil.dismiss();
+                    }
+                });
+            }
+        });
+
+        findViewById(R.id.tv_dialog3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppDialogUtil.showNormal(mContext, "确定弹窗", "春眠不觉晓，处处闻啼鸟", new OnConfirmListener() {
+                    @Override
+                    public void onConfirm() {
+                        AppDialogUtil.dismiss();
+                    }
+                });
+            }
+        });
+
+        findViewById(R.id.tv_dialog4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppDialogUtil.showSingle(mContext, "确定弹窗", "春眠不觉晓，处处闻啼鸟", "俺知道了", new OnConfirmListener() {
+                    @Override
+                    public void onConfirm() {
+                        AppDialogUtil.dismiss();
+                    }
+                });
+            }
+        });
+
 
         findViewById(R.id.tv_progress1).setOnClickListener(new View.OnClickListener() {
             @Override
