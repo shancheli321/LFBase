@@ -15,7 +15,7 @@ public class AppLoadingUtil {
      * @param context
      * @param text
      */
-    public static void showLoadingText(Context context, String text) {
+    public static void showLoading(Context context, String text) {
         getPopup(context);
         mLoadingPopup.setTitle(text);
         mLoadingPopup.show();
@@ -23,7 +23,7 @@ public class AppLoadingUtil {
 
 
     public static void showLoading(Context context) {
-        showLoadingText(context, "加载中...");
+        showLoading(context, "加载中...");
     }
 
 

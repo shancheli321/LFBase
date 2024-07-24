@@ -121,7 +121,7 @@ public class MainActivity extends AppBaseActivity {
         findViewById(R.id.tv_progress2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppLoadingUtil.showLoadingText(mContext, "我正在加载 请不要着急");
+                AppLoadingUtil.showLoading(mContext, "我正在加载 请不要着急");
             }
         });
 

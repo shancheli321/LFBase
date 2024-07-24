@@ -14,7 +14,14 @@ public class AppDialogUtil {
 
     private static BasePopupView mPopupView;
 
-    public static void show(Context context, String title, String content, String leftText, String rightText, OnConfirmListener confirmListener, OnCancelListener cancelListener, boolean isHideCancle) {
+    public static void show(Context context,
+                            String title,
+                            String content,
+                            String leftText,
+                            String rightText,
+                            OnConfirmListener confirmListener,
+                            OnCancelListener cancelListener,
+                            boolean isHideCancle) {
        if (mPopupView == null) {
            mPopupView = new XPopup.Builder(context)
                    .isDestroyOnDismiss(true)
@@ -34,7 +41,10 @@ public class AppDialogUtil {
      * @param content
      * @param onConfirmListener
      */
-    public static void showOK(Context context, String title, String content, OnConfirmListener onConfirmListener) {
+    public static void showOK(Context context,
+                              String title,
+                              String content,
+                              OnConfirmListener onConfirmListener) {
         show(context, title, content, "", "确定", onConfirmListener, null, true);
     }
 
@@ -46,7 +56,11 @@ public class AppDialogUtil {
      * @param rightText
      * @param confirmListener
      */
-    public static void showSingle(Context context, String title, String content, String rightText, OnConfirmListener confirmListener) {
+    public static void showSingle(Context context,
+                                  String title,
+                                  String content,
+                                  String rightText,
+                                  OnConfirmListener confirmListener) {
         show(context, title, content, "", rightText, confirmListener, null, true);
     }
 
@@ -58,7 +72,10 @@ public class AppDialogUtil {
      * @param content
      * @param confirmListener
      */
-    public static void showNormal(Context context, String title, String content, OnConfirmListener confirmListener) {
+    public static void showNormal(Context context,
+                                  String title,
+                                  String content,
+                                  OnConfirmListener confirmListener) {
         show(context, title, content, "取消", "确定", confirmListener, new OnCancelListener() {
             @Override
             public void onCancel() {
