@@ -3,6 +3,8 @@ package com.example.base;
 import android.app.Application;
 
 import com.lf.base.manager.AppActivityManager;
+import com.lf.tools.network.LFNetStateChangeListener;
+import com.lf.tools.network.LFNetStateChangeReceiver;
 import com.lf.ui.util.AppToastUtil;
 import com.lf.util.log.AppLog;
 
@@ -21,6 +23,18 @@ public class MyApplication extends Application {
             @Override
             public void d(String tag, String log) {
                 AppLog.d(tag, log);
+            }
+        });
+
+        LFNetStateChangeReceiver.registerReceiver(getApplicationContext(), new LFNetStateChangeListener() {
+            @Override
+            public void onNetDisconnected() {
+
+            }
+
+            @Override
+            public void onNetConnected(int networkType) {
+
             }
         });
     }
